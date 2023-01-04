@@ -1,0 +1,71 @@
+GET http://192.168.64.3/lealv2/api/product/read HTTP/1.1
+
+###
+GET http://192.168.64.3/lealv2/api/product/read_one.php?id=65 HTTP/1.1
+
+###
+GET http://192.168.64.3/lealv2/api/product/read_paging.php HTTP/1.1
+
+###
+GET http://192.168.64.3/lealv2/api/product/search.php?s=JR HTTP/1.1
+
+###
+POST http://192.168.64.3/lealv2/api/product/create.php HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "Amazing JR Pillow 9.0",
+    "price" : "199",
+    "description" : "The best pillow for amazing programmers.",
+    "category_id" : 2,
+    "created" : "2018-06-01 00:35:07"
+}
+
+###
+POST http://192.168.64.3/lealv2/api/product/update.php HTTP/1.1
+content-type: application/json
+
+{
+    "id" : "65",
+    "name" : "Amazing JR Blaster 3.0",
+    "price" : "255",
+    "description" : "The best pillow for amazing programmers.",
+    "category_id" : 2,
+    "created" : "2018-08-01 00:35:07"
+}
+
+###
+POST http://192.168.64.3/lealv2/api/product/delete.php HTTP/1.1
+content-type: application/json
+
+{
+    "id" : "67"
+}
+
+###
+POST http://192.168.64.3/lealv2/api/user/create.php HTTP/1.1
+content-type: application/json
+
+{
+    "firstname" : "Mike",
+    "lastname" : "asdasd",
+    "email" : "mike@codeofaninja.com",
+    "password" : "555"
+}
+
+###
+POST http://192.168.64.3/lealv2/api/user/login.php HTTP/1.1
+content-type: application/json
+
+{
+    "email" : "mike@codeofaninja.com",
+    "password" : "555"
+}
+
+###
+POST http://192.168.64.3/lealv2/api/user/validate_token.php HTTP/1.1
+content-type: application/json
+
+{
+  "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTA4MzIxODIsImV4cCI6MTY1MDgzNTc4MiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguNjQuMy9sZWFsdjIvYXBpLyIsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik1pa2UiLCJsYXN0bmFtZSI6ImFzZGFzZCIsImVtYWlsIjoibWlrZUBjb2Rlb2ZhbmluamEuY29tIn19.Oe3yzbKnVHXdcWFIvs2QbV8fMUzH3QZdVbHvzY1mxu8"
+}
